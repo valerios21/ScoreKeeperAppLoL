@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layoutTeamAB"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="horizontal">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/layoutTeamA"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="1"
+            tools:context="com.example.android.courtcounter.MainActivity">
+
+            <EditText
+                android:id="@+id/txtTeamNameA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center_horizontal"
+                android:text="Enter Team's Name"
+                android:textColor="?android:attr/colorLongPressedHighlight"
+                android:textSize="14sp"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:id="@+id/txtTeamScoreA"
+                android:layout_width="100dp"
+                android:layout_height="58dp"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+
+                android:gravity="center_horizontal"
+                android:text="0"
+                android:textColor="@android:color/background_light"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/btnVictoryTeamA"
+                android:layout_width="173dp"
+                android:layout_height="148dp"
+                android:layout_margin="8dp"
+
+                android:onClick="addOnePointTeamAVictory" />
+
+            <Button
+                android:id="@+id/btnBaronTeamA"
+                android:layout_width="54dp"
+                android:layout_height="53dp"
+                android:layout_marginLeft="70dp"
+
+                android:onClick="addOnePointsTeamABaron" />
+
+            <TextView
+                android:id="@+id/txtBaronScoreTeamA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="0"
+                android:textColor="@android:color/background_dark"
+                android:textSize="30sp"
+                android:textStyle="normal|bold"
+                android:typeface="serif" />
+
+            <Button
+                android:id="@+id/btnDrakeTeamA"
+                android:layout_width="54dp"
+                android:layout_height="53dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="15dp"
+
+                android:onClick="addOnePointsTeamADrake" />
+
+            <TextView
+                android:id="@+id/txtDrakeScoreTeamA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="0"
+                android:textColor="@android:color/background_dark"
+                android:textSize="30sp"
+                android:textStyle="normal|bold"
+                android:typeface="serif" />
+
+        </LinearLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/layoutTeamB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:orientation="vertical"
+            tools:context="com.example.android.courtcounter.MainActivity">
+
+            <EditText
+                android:id="@+id/txtTeamNameB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center_horizontal"
+                android:text="Enter Team's Name"
+                android:textColor="?android:attr/colorLongPressedHighlight"
+                android:textSize="14sp"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:id="@+id/txtTeamScoreB"
+                android:layout_width="100dp"
+                android:layout_height="58dp"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+
+                android:gravity="center_horizontal"
+                android:text="0"
+                android:textColor="@android:color/background_light"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/btnVictoryTeamB"
+                android:layout_width="173dp"
+                android:layout_height="148dp"
+                android:layout_margin="8dp"
+
+                android:onClick="addOnePointTeamBVictory" />
+
+            <Button
+                android:id="@+id/btnBaronTeamB"
+                android:layout_width="54dp"
+                android:layout_height="53dp"
+                android:layout_marginLeft="70dp"
+
+                android:onClick="addOnePointsTeamBBaron" />
+
+            <TextView
+                android:id="@+id/baronScoreTeamB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="0"
+                android:textColor="@android:color/background_dark"
+                android:textSize="30sp"
+                android:textStyle="normal|bold"
+                android:typeface="serif" />
+
+            <Button
+                android:layout_width="54dp"
+                android:layout_height="53dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="15dp"
+
+                android:onClick="addOnePointsTeamBDrake" />
+
+            <TextView
+                android:id="@+id/txtDrakeScoreTeamB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="0"
+                android:textColor="@android:color/background_dark"
+                android:textSize="30sp"
+                android:textStyle="normal|bold"
+                android:typeface="serif" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnNewGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="monospace"
+        android:text="New Game"
+        android:textSize="24sp"
+        android:typeface="sans"
+        android:onClick="ResetScore"/>
+
+</RelativeLayout>
